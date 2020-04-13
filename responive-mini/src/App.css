@@ -1,29 +1,60 @@
-.App {
-  text-align: center;
-  background: rgb(231, 231, 231);
+header {
+  height: 90px;
+  width: 100vw;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+header > div {
+  height: 100%; /* takes up whole parent component */
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+header nav ul { /* no chevrons means it's not a direct child meaning it will change everything not just a single one*/
+  min-width: 400px;
+  display: flex;
+  background-color: darkgoldenrod;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
   color: white;
+
 }
 
-.App-title {
-  font-size: 1.5em;
+header button {
+  display: none;
 }
 
-.App-intro {
-  font-size: large;
-}
+@media screen and (max-width: 700px) {
+  header nav {
+    min-height: 100vh;
+    background-color: green;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  header div button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    z-index: 1; /* z-index is going through the computer screen like x is horizontal, y is vertical and z is the third dimension that appears as if it goes through the computer screen, think of a 3d graph*/
+    background-color: fuchsia;
+  }
 }

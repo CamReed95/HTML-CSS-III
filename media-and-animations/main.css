@@ -6,10 +6,18 @@ body {
 }
 
 .box {
-    height: 200px;
-    width: 900px;
-    background-color: chartreuse;
-    
+    width: 800px;
+        height: 500px;
+        background-position: -750px 0px; /* left is x axis right is y axis*/
+
+        background-size: 100%;
+        background-image: url('image-url');
+        animation-name: zoom;
+        animation-duration: 3s;
+        animation-delay: 0s; /* how long until after img loads to start animation*/
+        animation-iteration-count: infinite; /* runs forever*/
+        anImation-timing-function: ease-in-out; 
+        animation-fill-mode: forwards;
 }
 
 @keyframes zoom  {
@@ -18,7 +26,6 @@ body {
     }
     50% {
         background-size: 300%;
-        background-position: -750px 0px; /* left is x axis right is y axis*/
     }
     100% {
         background-size: 100%;
@@ -29,21 +36,17 @@ body {
 @media(max-width: 1100px) and (min-width: 901px) {
     .box {
         width: 800px;
-        height: 500px;
+        height: 200px;
         background-size: 100%;
-        background-image: url('image-url');
-        animation-name: zoom;
-        animation-duration: 3s;
-        animation-delay: 0s; /* how long until after img loads to start animation*/
-        animation-iteration-count: infinite; /* runs forever*/
-        anImation-timing-function: ease-in-out; 
-        animation-fill-mode: forwards;
+        background-image: url('urllink')
     }
 }
 
 @media(max-width: 900px) and (min-width: 801px) {
     .box {
         background-color: darkgoldenrod;
+        aniimation-name:
+        animation-duration: 
     }
 }
 

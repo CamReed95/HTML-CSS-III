@@ -1,16 +1,34 @@
 import React from 'react';
 
-const Banner = (props) => {
+class Banner extends React.Component {
+  render() {
     return (
-        <div className='banner-container'>
-            <div>
-                {/* <h1>HAMBURGERS</h1> */}
-                <h2>Welcome To Our Studio!</h2>
-                <h1>IT'S NICE TO MEET YOU</h1>
-                <button>TELL ME MORE</button>
-            </div>
+      <header>
+        <div>
+                <div className='logo'>
+                    <a href='#'>Start Bootstrap</a>
+                </div>
+                <button className='hide'>Click!</button>
+                <nav className={'navbar'}>
+                    <ul>
+                        <li>
+                            <a href='#/services'>Services</a>
+                        </li>
+                        <li>
+                            <a href='#/portfolio'>Portfolio</a>
+                        </li>
+                        <li>
+                            <a href='#/about'>About</a>
+                        </li>
+                        <li>
+                            <a href='#/team'>Team</a>
+                        </li>
+                    </ul>
+                </nav>
         </div>
+      </header>
     );
-};
+  }
+}
 
 export default Banner;
