@@ -43,6 +43,13 @@ header button {
     position: fixed;
     top: 0;
     right: 0;
+    transform: translate(300px, 0);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  header .show {
+    transform: tranlsate(0, 0)
   }
 
   header nav ul {
