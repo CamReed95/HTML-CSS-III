@@ -38,15 +38,15 @@ body {
         width: 800px;
         height: 200px;
         background-size: 100%;
-        background-image: url('urllink')
+        background-image: url('')
     }
 }
 
 @media(max-width: 900px) and (min-width: 801px) {
     .box {
         background-color: darkgoldenrod;
-        aniimation-name:
-        animation-duration: 
+        animation-name: 'name';
+        animation-duration: 1s;
     }
 }
 

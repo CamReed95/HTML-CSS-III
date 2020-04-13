@@ -45,6 +45,15 @@ header button {
     right: 0;
   }
 
+  header nav ul {
+    flex-direction: column;
+    min-width: 300px;
+    height: 300px;
+    padding: 90px;
+    background-color: green;
+    
+  }
+
   header div button {
     display: flex;
     position: absolute;

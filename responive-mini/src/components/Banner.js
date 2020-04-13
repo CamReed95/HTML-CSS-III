@@ -1,15 +1,31 @@
 import React from 'react';
 
 class Banner extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            toggleSideBar: false
+        }
+    }
+
+    toggleSideBarFunc(){
+        this.setState((prevState) => {
+            return {
+                toggleSideBar: !prevState.toggleSideBar
+            }
+        })
+    }
+
   render() {
+      
     return (
       <header>
         <div>
                 <div className='logo'>
                     <a href='#'>Start Bootstrap</a>
                 </div>
-                <button className='hide'>Click!</button>
-                <nav className={'navbar'}>
+                <button onClick={() => this.toggleSideBarFunc()} className='hide'>Click!</button>
+                <nav className={this.state.toggleSideBar ? 'show': ''}>
                     <ul>
                         <li>
                             <a href='#/services'>Services</a>
